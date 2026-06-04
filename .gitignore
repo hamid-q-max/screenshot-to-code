@@ -8,9 +8,57 @@ backend/run_logs/*
 # Weird Docker setup related files
 backend/backend/*
 
-# Env vars
-frontend/.env.local
+# Env vars and secrets (never commit API keys)
 .env
+.env.*
+!.env.example
+frontend/.env
+frontend/.env.local
+frontend/.env.*.local
+backend/.env
+backend/.env.*
 
-# Mac files
+# OS
 .DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+
+# Python (if tooling/venv ends up at repo root)
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+ENV/
+
+# Node (stray installs at repo root)
+node_modules/
+
+# IDE / editor
+.idea/
+*.swp
+*.swo
+*~
+
+# Test / coverage artifacts at repo root
+.coverage
+htmlcov/
+.pytest_cache/
+*.log
+
+# Local scratch / downloads
+tmp/
+temp/
+*.local.bak
+
+# direnv / local secrets
+.envrc
+
+# Keys and local certs
+*.pem
+*.p12
+
+# Vite / TypeScript (sometimes emitted at repo root by tooling)
+*.tsbuildinfo
