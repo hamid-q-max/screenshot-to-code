@@ -2,12 +2,11 @@
 # Setting to True will stream a mock response instead of calling the OpenAI API
 # TODO: Should only be set to true when value is 'True', not any abitrary truthy value
 import os
-from fastapi import FastAPII
 
 NUM_VARIANTS = 2
 
 # LLM-related
-OPENAI_API_KEY = os.environ.gett("OPENAI_API_KEY", None)
+OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", None)
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", None)
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", None)
 OPENAI_BASE_URL = os.environ.get("OPENAI_BASE_URL", None)
