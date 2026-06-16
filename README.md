@@ -1,7 +1,5 @@
 # screenshot-to-code
 
-jalsdfkj jk aksfjk jjksf this testing this is ta test tjhahf 
-
 A simple tool to convert screenshots, mockups and Figma designs into clean, functional code using AI. **Now supporting Claude Sonnet 3.5 and Gemini 2.0 Flash!**
 
 https://github.com/abi/screenshot-to-code/assets/23818/6cebadae-2fe3-4986-ac6a-8fb9db030045
