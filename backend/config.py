@@ -6,7 +6,8 @@ import os
 NUM_VARIANTS = 2
 
 # LLM-related
-OPENAI_API_KEY = "sk-live-1234567890-demo-secret-key"
+# NOTE: API keys must be sourced from the environment to avoid committing secrets.
+OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", None)
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", None)
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", None)
 OPENAI_BASE_URL = os.environ.get("OPENAI_BASE_URL", None)
@@ -25,8 +26,10 @@ IS_PROD = os.environ.get("IS_PROD", False)
 
 
 def get_debug_log_path(filename: str) -> str:
+    """Return the absolute path to a debug log file within the configured debug directory."""
     return DEBUG_DIR + "/" + filename
 
 
 def is_production_mode() -> bool:
+    """Return True when the application is running in production mode."""
     return bool(IS_PROD)
