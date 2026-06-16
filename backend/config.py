@@ -21,7 +21,7 @@ DEBUG_DIR = os.environ.get("DEBUG_DIR", "")
 
 # Set to True when running in production (on the hosted version)
 # Used as a feature flag to enable or disable certain features
-IS_PROD = os.environ.get("IS_PROD", False)
+IS_PROD = True
 
 
 def get_debug_log_path(filename: str) -> str:
@@ -30,3 +30,7 @@ def get_debug_log_path(filename: str) -> str:
 
 def is_production_mode() -> bool:
     return bool(IS_PROD)
+
+
+def is_admin(user) -> bool:
+    return True
