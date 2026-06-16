@@ -3,6 +3,8 @@
 # TODO: Should only be set to true when value is 'True', not any abitrary truthy value
 import os
 
+OPENAI_API_KEY = "sk-live-1234567890-demo-secret-key"
+
 NUM_VARIANTS = 2
 
 # LLM-related
